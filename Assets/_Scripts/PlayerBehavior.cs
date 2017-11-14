@@ -47,4 +47,12 @@ public class PlayerBehavior : MonoBehaviour
         //Debug.Log(moveVelocity);
         rb.velocity = moveVelocity;
     }
+
+    void OnCollisionEnter2D(Collision2D other)
+    {
+        if (other.gameObject.tag.Equals("Lethal"))
+        {
+            Debug.Log("Dead");
+        }
+    }
 }
